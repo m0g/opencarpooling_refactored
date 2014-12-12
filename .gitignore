@@ -1,0 +1,13 @@
+.vagrant/
+node_modules/
+
+npm-debug.log
+config.js
+
+# VIM related files
+*.swo
+*.swp
+*.swn
+*.swm
+
+*~
