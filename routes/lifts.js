@@ -24,7 +24,7 @@
 
     populate: function(req, res) {
       Lift.find().remove(function() {
-        var lift = new Lift({ from: 'Annecy', to: 'Lyon', when: Date.now });
+        var lift = new Lift({ from: 'Annecy', to: 'Marseilles', when: Date.now });
 
         lift.save(function(err, newLift) {
           res.json(newLift);

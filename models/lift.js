@@ -17,15 +17,15 @@ schema.pre('save', function(next){
 
   geonames.getCity(self.from, function(results) {
     self.fromLoc = results.loc;
+    self.from = results.value
 
     geonames.getCity(self.to, function(results) {
       self.toLoc = results.loc;
-      console.log(results);
+      self.to = results.value
+
       next();
     });
   });
-
-  console.log(self);
 });
 
 // Return a Tweet model based upon the defined schema
