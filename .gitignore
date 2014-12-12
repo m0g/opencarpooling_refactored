@@ -1,5 +1,7 @@
 .vagrant/
 node_modules/
+public/css
+public/js
 
 npm-debug.log
 config.js

@@ -6,20 +6,25 @@
   "scripts": {
     "watch": "watchify client.js -o public/js/bundle.js -v",
     "browserify": "browserify client.js | uglifyjs > public/js/bundle.js",
+    "less": "lessc style.less public/css/style.css",
     "build": "npm run browserify ",
     "start": "npm run watch & nodemon server.js -L"
+  },
+  "browser": {
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
   },
   "author": "Loic Nogues",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.1",
     "browserify": "^7.0.0",
     "express": "^4.10.5",
     "express-handlebars": "^1.1.0",
+    "less": "^2.1.1",
     "mongoose": "^3.8.20",
     "node-jsx": "^0.12.4",
     "react": "^0.12.1",
     "uglifyjs": "^2.3.6",
-    "uri-js": "^1.4.2",
     "watchify": "^2.1.1"
   }
 }
