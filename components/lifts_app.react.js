@@ -21,8 +21,11 @@ module.exports = LiftsApp = React.createClass({
   render: function(){
 
     return (
-      <div className="lifts-app">
-        <Lifts lifts={this.state.lifts} />
+      <div className="container">
+        <h3>Latest lifts</h3>
+        <div className="lifts-app lifts">
+          <Lifts lifts={this.state.lifts} />
+        </div>
       </div>
     )
 

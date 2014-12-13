@@ -7,14 +7,20 @@
     "watch": "watchify client.js -o public/js/bundle.js -v",
     "browserify": "browserify client.js | uglifyjs > public/js/bundle.js",
     "less": "lessc style.less public/css/style.css",
+    "bootstrap": "cp node_modules/bootstrap/dist/css/bootstrap.css public/css",
     "build": "npm run browserify ",
-    "start": "npm run watch & nodemon server.js -L"
+    "start": "npm run watch & npm run less & npm run bootstrap & nodemon server.js -L"
   },
   "browser": {
     "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
   },
   "author": "Loic Nogues",
   "license": "ISC",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
   "dependencies": {
     "bootstrap": "^3.3.1",
     "browserify": "^7.0.0",
@@ -24,6 +30,7 @@
     "mongoose": "^3.8.20",
     "node-jsx": "^0.12.4",
     "react": "^0.12.1",
+    "reactify": "^0.17.1",
     "uglifyjs": "^2.3.6",
     "watchify": "^2.1.1"
   }
