@@ -5,6 +5,10 @@
   var LiftsApp = require('./../components/lifts_app.react');
 
   module.exports = {
+    new: function(req, res) {
+      res.render('lift_new');
+    },
+
     index: function(req, res) {
       Lift.find(function(err, lifts) {
         console.log(lifts);

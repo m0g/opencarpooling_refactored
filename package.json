@@ -7,7 +7,7 @@
     "watch": "watchify client.js -o public/js/bundle.js -v",
     "browserify": "browserify client.js | uglifyjs > public/js/bundle.js",
     "less": "lessc style.less public/css/style.css",
-    "bootstrap": "cp node_modules/bootstrap/dist/css/bootstrap.css public/css",
+    "bootstrap": "cp node_modules/bootstrap/dist/css/* public/css",
     "build": "npm run browserify ",
     "start": "npm run watch & npm run less & npm run bootstrap & nodemon server.js -L"
   },
@@ -26,6 +26,7 @@
     "browserify": "^7.0.0",
     "express": "^4.10.5",
     "express-handlebars": "^1.1.0",
+    "leaflet": "^0.7.3",
     "less": "^2.1.1",
     "mongoose": "^3.8.20",
     "node-jsx": "^0.12.4",

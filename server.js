@@ -25,6 +25,7 @@ mongoose.connect('mongodb://localhost/opencarpooling');
 
 // Index Route
 app.get('/', lifts.index);
+app.get('/lifts/new', lifts.new);
 app.get('/populate', lifts.populate);
 
 // Page Route
