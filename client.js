@@ -32,4 +32,15 @@ var initBackgroundMap = function() {
   if (map.tap) map.tap.disable();
 };
 
-initBackgroundMap();
+var initLiftMap = function() {
+  map = L.mapbox.map('form-map', Meteor.settings.public.mapboxMapName)
+    .setView([ 46.088, 2.219 ], 6);
+
+  polyline = L.polyline([]).addTo(map);
+};
+
+if (document.getElementById('bg-map'))
+  initBackgroundMap();
+
+else if (document.getElementById('form-map'))
+  initLiftMap();
